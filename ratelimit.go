@@ -3,6 +3,7 @@ package gogmapsautocomplete
 import "time"
 
 const (
+	// This should be 1 request every 35 seconds to stay within the $200 credit
 	COIN_RATE = time.Duration(1 * time.Second)
 )
 
