@@ -6,8 +6,9 @@ import (
 )
 
 func TestAndPrint(t *testing.T) {
-	ac, err := Autocomplete(
-		"north boulder pa",
+	service := New()
+	ac, err := service.Autocomplete(
+		"north boul",
 		40.014984,
 		-105.270546,
 		false,

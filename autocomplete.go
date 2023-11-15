@@ -22,11 +22,13 @@ func New() *Service {
 	return service
 }
 
-func Autocomplete(
+func (s *Service) Autocomplete(
 	query string,
 	lat, lon float64,
 	dry bool,
 ) (*PlaceAutocompleteResponse, error) {
+	<-s.coins
+
 	API_KEY := os.Getenv("GOOGLEAPIKEY")
 
 	url, err := url.Parse(ENDPOINT)
