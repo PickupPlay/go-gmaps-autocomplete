@@ -1,7 +1,6 @@
 package gogoogleplaces
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -13,12 +12,8 @@ func TestDetails(t *testing.T) {
 		t.Error(err)
 	}
 
-	fmt.Println(place.Predictions[0])
-
-	dt, err := service.Details(place.Predictions[0].PlaceID)
+	_, err = service.Details(place.Predictions[0].PlaceID)
 	if err != nil {
 		t.Error(err)
 	}
-
-	fmt.Println(dt)
 }
