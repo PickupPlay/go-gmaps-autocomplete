@@ -1,13 +1,12 @@
-package gogmapsautocomplete
+package gogoogleplaces
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestAndPrint(t *testing.T) {
 	service := New()
-	ac, err := service.Autocomplete(
+	_, err := service.Autocomplete(
 		"north boul",
 		40.014984,
 		-105.270546,
@@ -16,6 +15,4 @@ func TestAndPrint(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-
-	fmt.Println(ac)
 }
