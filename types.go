@@ -1,4 +1,4 @@
-package gogmapsautocomplete
+package gogoogleplaces
 
 import "encoding/json"
 
@@ -8,7 +8,7 @@ type PlaceAutocompleteResponse struct {
 	ErrorMessage string                        `json:"error_message"`
 }
 
-type PlacesAutocompleteStatus struct {
+type PlaceAutocompleteStatus struct {
 }
 
 type PlaceAutocompletePrediction struct {
@@ -19,5 +19,19 @@ type PlaceAutocompletePrediction struct {
 
 func (ac PlaceAutocompleteResponse) String() string {
 	bs, _ := json.MarshalIndent(ac, "", "  ")
+	return string(bs)
+}
+
+type PlaceDetailsResponse struct {
+	Location Location `json:"location"`
+}
+
+type Location struct {
+	Lat float64 `json:"latitude"`
+	Lon float64 `json:"longitude"`
+}
+
+func (r PlaceDetailsResponse) String() string {
+	bs, _ := json.MarshalIndent(r, "", "  ")
 	return string(bs)
 }
