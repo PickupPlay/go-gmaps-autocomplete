@@ -4,8 +4,8 @@ import "time"
 
 const (
 	// This should be 1 request every 35 seconds to stay within the $200 credit
-	AC_COIN_RATE = time.Duration(0 * time.Second)
-	DT_COIN_RATE = time.Duration(0 * time.Minute)
+	AC_COIN_RATE = time.Duration(20 * time.Second)
+	DT_COIN_RATE = time.Duration(30 * time.Second)
 )
 
 func (s *Service) genCoins() {
