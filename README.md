@@ -1,12 +1,14 @@
-# go-gmaps-autocomplete
-Service code for fetching autocomplete results from Google Maps.
+# go-google-places
 
-Comes built in with a rate limiter you can tweek to your needs
+Middleware code for making Google Places API calls.
+This module is meant to be imported by a service and run in a secure environment that has access to your Google API key.
+
+Comes built in with a rate limiter than can be customized per API/endpoint/pricing.
 
 # Usage
 
 >[!WARNING]
->Refer to the code in `example/` as this will stay up to date.
+>Refer to the code in `example/` as it is guaranteed to compile
 
 ```go
 import (
@@ -29,6 +31,10 @@ func main() {
 ```
 
 # Updates
+
+## Nov 27
+
+- Readme 'usage' and example binary
 
 ## Nov 26
 
