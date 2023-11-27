@@ -5,8 +5,8 @@ Comes built in with a rate limiter you can tweek to your needs
 
 # Usage
 
-[!WARNING]
-Refer to the code in `example/` as this will stay up to date.
+>[!WARNING]
+>Refer to the code in `example/` as this will stay up to date.
 
 ```go
 import (
